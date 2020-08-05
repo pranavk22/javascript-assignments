@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Enter no. of flips <input type="number" id="flips" name="flips" min="1" required />
+    <button onclick="numHeads(document.getElementById('flips').value)">Calculate</button><br>
+    No. of heads : <span id="heads"></span>
+    <script>
+        function flipCoin() {
+            if (Math.random() < 0.5) {
+                return ("Heads");
+            } else {
+                return ("Tails");
+            }
+        }
+
+        function numHeads(flips) {
+            console.clear();
+            var numOfHeads = 0;
+            for (var i = 0; i < flips; i++) {
+                var result = flipCoin();
+                console.log(result);
+                if (result == "Heads") {
+                    numOfHeads++;
+                }
+            }
+            document.getElementById("heads").innerHTML = numOfHeads;
+        }
+    </script>
+</body>
+
+</html>

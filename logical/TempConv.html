@@ -1,0 +1,23 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="fahr" type="number" name="input" placeholder="Enter temp in Fahrenheit" required> F<br>
+    <input type="submit" onclick="tempConv()" value="Convert" /><br>
+
+    <span id="cel"></span>
+
+    <script>
+        function tempConv() {
+            fahr = document.getElementById("fahr").value;
+            document.getElementById("cel").innerHTML = (fahr - 32) / 1.8 + " C";
+        }
+    </script>
+</body>
+
+</html>

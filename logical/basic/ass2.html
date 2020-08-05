@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function max() {
+            var num1, num2, num3;
+            num1 = document.getElementById("first").value;
+            num2 = document.getElementById("second").value;
+            num3 = document.getElementById("third").value;
+
+            if (num1 > num2) {
+                if (num1 > num3) {
+                    alert(num1 + " is maximum");
+                }
+                else {
+                    alert(num3 + " is maximum");
+                }
+            }
+
+            else {
+                if (num2 > num3) {
+                    alert(num2 + " is maximum");
+                }
+                else {
+                    alert(num3 + " is maximum");
+                }
+            }
+        }
+    </script>
+
+
+    Enter first number : <input type="number" id="first"></input><br>
+    Enter second number : <input type="number" id="second"></input><br>
+    Enter third number : <input type="number" id="third"></input><br>
+    <button onclick="max()">Find maximum</button>
+</body>
+
+</html>

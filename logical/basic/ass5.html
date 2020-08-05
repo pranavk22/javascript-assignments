@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter the no. of times to be concatenated <input type="number" id="num" name="num" min="1" required /><br>
+    Enter a short string <input type="text" id="string" name="string" required /><br>
+    <button
+        onclick="padChars(document.getElementById('num').value, document.getElementById('string').value)">Concatenate</button>
+    <p> Output: <span id="output"></span> </p>
+    <script>
+        function padChars(n, string) {
+            var result = "";
+            for (var i = 0; i < n; i++) {
+                result = result + string;
+            }
+            document.getElementById('output').innerHTML = result;
+        }
+    </script>
+</body>
+</html>
